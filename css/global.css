@@ -1,0 +1,23 @@
+:root {
+  --background: #a0a4ad;
+  --card: #fff9f1;
+  --text: #151515;
+}
+* {
+  margin: auto;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "HinaMincho";
+  src: url("/fonts/HinaMincho-Regular.woff2");
+  font-style: normal;
+}
+.about-page {
+  font-family: "HinaMincho";
+  color: var(--text);
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 50;
+  text-decoration: none;
+}
