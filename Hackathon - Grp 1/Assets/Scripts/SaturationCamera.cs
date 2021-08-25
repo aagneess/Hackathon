@@ -17,7 +17,7 @@ public class SaturationCamera : MonoBehaviour
 
     void Update()
     {
-        if(saturationLevel == 1 && volume.weight > 0.7f)
+        if(saturationLevel == 1 && volume.weight > 0f)
         {
             Debug.Log(volume.weight);
             ChangeSaturation();
@@ -26,6 +26,6 @@ public class SaturationCamera : MonoBehaviour
 
     void ChangeSaturation()
     {
-        volume.weight -= 0.2f * Time.deltaTime;
+        volume.weight -= 0.1f * Time.deltaTime;
     }
 }
