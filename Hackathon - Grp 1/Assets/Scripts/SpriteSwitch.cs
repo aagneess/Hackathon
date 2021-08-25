@@ -7,7 +7,6 @@ public class SpriteSwitch : MonoBehaviour
     public SaturationCamera saturationCamera;
 
     bool houseOneActivated = false;
-    public GameObject houseOneLightOff;
     public GameObject houseOneLightOn;
     public void HouseOneButton()
     {
@@ -17,7 +16,6 @@ public class SpriteSwitch : MonoBehaviour
         {
             Debug.Log("level " + saturationCamera.saturationLevel);
             saturationCamera.saturationLevel++;
-            houseOneLightOff.SetActive(false);
             houseOneLightOn.SetActive(true);
         }
     }
