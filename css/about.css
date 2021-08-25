@@ -86,3 +86,13 @@ a:hover::before {
   text-decoration: none;
   margin: 1rem;
 }
+img {
+  border-radius: 50%;
+  width: 150px;
+  float: right;
+}
+/* div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
