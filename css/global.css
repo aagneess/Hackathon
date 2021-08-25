@@ -12,6 +12,11 @@
   src: url("/fonts/HinaMincho-Regular.woff2");
   font-style: normal;
 }
+@font-face {
+  font-family: "SourceSans";
+  src: url("/fonts/SourceSansPro-Light.woff2");
+  font-style: normal;
+}
 .about-page {
   font-family: "HinaMincho";
   color: var(--text);

@@ -8,7 +8,7 @@ footer {
   justify-content: center;
 }
 section {
-  padding-top: 7rem;
+  padding-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -38,13 +38,13 @@ h2 {
 }
 
 h3 {
-  font-family: "HinaMincho";
+  font-family: "SourceSans";
   color: var(--text);
   font-size: 1.2rem;
   font-weight: 50;
 }
 a {
-  font-family: "HinaMincho";
+  font-family: "SourceSans";
   color: var(--text);
   text-align: center;
   font-size: 1.2rem;
@@ -93,12 +93,6 @@ img {
   object-fit: scale-down;
   float: right;
 }
-/* div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
@@ -113,13 +107,16 @@ img {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: #ccc;
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-  padding: 0 18px;
   display: none;
   overflow: hidden;
+}
+p {
+  font-family: "SourceSans";
 }

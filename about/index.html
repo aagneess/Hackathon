@@ -16,7 +16,7 @@
     <section>
       <article>
         <div>
-          <img src="/about/pics/tove.jpg" alt="profile pic of tove">
+          <img src="/about/pics/tove.png" alt="profile pic of tove" />
           <h2>Tove Ahlgren</h2>
         </div>
         <h3>Infoga text här om vad du jobbat med under projektet</h3>
@@ -24,7 +24,7 @@
       </article>
       <article>
         <div>
-          <img src="/about/pics/lars.jpg" alt="profile pic of lars">
+          <img src="/about/pics/lars.jpg" alt="profile pic of lars" />
           <h2>Lars Olsson</h2>
         </div>
         <h3>Infoga text här om vad du jobbat med under projektet</h3>
@@ -38,21 +38,32 @@
 
       <article>
         <div>
-          <img src="https://avatars.githubusercontent.com/u/70575715?v=4" alt="profile pic of agnes" />
+          <img
+            src="https://avatars.githubusercontent.com/u/70575715?v=4"
+            alt="profile pic of agnes"
+          />
           <h2>Agnes Binett</h2>
         </div>
         <h3>Infoga text här om vad du jobbat med under projektet</h3>
-        <a>Länk till min Github</a>
+        <a href="https://github.com/aagneess">Länk till min Github</a>
       </article>
 
       <article>
         <div>
-          <img src="https://avatars.githubusercontent.com/u/61893425?v=4" alt="profile pic of emil">
+          <img
+            src="https://avatars.githubusercontent.com/u/61893425?v=4"
+            alt="profile pic of emil"
+          />
           <h2>Emil Pettersson</h2>
         </div>
         <button type="button" class="collapsible">Läs mer...</button>
         <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </div>
         <!-- <h3>Infoga text här om vad du jobbat med under projektet</h3> -->
         <a>Länk till min Github</a>
@@ -71,13 +82,12 @@
   </body>
 </html>
 
-
 <script>
   var coll = document.getElementsByClassName("collapsible");
   var i;
-  
+
   for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
       if (content.style.display === "block") {
@@ -87,4 +97,4 @@
       }
     });
   }
-  </script>
+</script>
