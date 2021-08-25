@@ -15,12 +15,18 @@
 
     <section>
       <article>
-        <h2>Tove Ahlgren</h2>
+        <div>
+          <img src="/about/pics/tove.png" alt="">
+          <h2>Tove Ahlgren</h2>
+        </div>
         <h3>Infoga text här om vad du jobbat med under projektet</h3>
         <a>Email-adress</a>
       </article>
       <article>
-        <h2>Lars Olsson</h2>
+        <div>
+          <img src="/about/pics/lars.png" alt="">
+          <h2>Lars Olsson</h2>
+        </div>
         <h3>Infoga text här om vad du jobbat med under projektet</h3>
         <a>Email-adress</a>
       </article>
@@ -44,7 +50,11 @@
           <img src="https://avatars.githubusercontent.com/u/61893425?v=4" alt="">
           <h2>Emil Pettersson</h2>
         </div>
-        <h3>Infoga text här om vad du jobbat med under projektet</h3>
+        <button type="button" class="collapsible">Läs mer...</button>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <!-- <h3>Infoga text här om vad du jobbat med under projektet</h3> -->
         <a>Länk till min Github</a>
       </article>
 
@@ -60,3 +70,21 @@
     </footer>
   </body>
 </html>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
