@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
     public GameObject ButtonTree;
 
     public GameObject medLiteKärlekText;
+    public GameObject bliMånadsgivareText;
+    public GameObject outroBG;
 
     public Animator textAnimator;
+
+ //   public SpriteRenderer spriteRendererTextOutro;
 
     public Buttons buttons;
 
@@ -29,7 +33,8 @@ public class GameManager : MonoBehaviour
         ljusOchVarme,
         takOverHuvudet,
         kanStillaHunger,
-        medLiteKarlek
+        medLiteKarlek,
+        bliManadsGivare
     }
 
     private void Start()
@@ -87,12 +92,19 @@ public class GameManager : MonoBehaviour
 
             if (storyAudio.isPlaying != true)
             {
-                ButtonTree.SetActive(true);
+                timer += Time.deltaTime;
+
+                if(timer > 3f)
+                {
+                    ButtonTree.SetActive(true);
+                }
             }
         }
 
         else if (currentState == state.kanStillaHunger)
         {
+            timer = 0f;
+
             if (alreadyPlayed == false)
             {
                 ButtonTree.SetActive(false);
@@ -125,6 +137,48 @@ public class GameManager : MonoBehaviour
 
                 alreadyPlayed = true;
             }
+
+            if (storyAudio.isPlaying != true)
+            {
+                alreadyPlayed = false;
+                currentState = state.bliManadsGivare;
+            }
+        }
+
+
+        else if (currentState == state.bliManadsGivare)
+        {
+            if (alreadyPlayed == false)
+            {
+                timer += Time.deltaTime;
+
+                if(timer >= 1f && timer <= 2f)
+                {
+                    outroBG.SetActive(true);
+                }
+
+                if (timer >= 2f && timer <= 3f)
+                {
+                    storyAudio.clip = Resources.Load<AudioClip>("Story/Visst_var_det_enkelt");
+                    storyAudio.PlayDelayed(0.2f);
+
+                    bliMånadsgivareText.SetActive(true);
+
+
+                    alreadyPlayed = true;
+                }
+            }
         }
     }
+
+/*    IEnumerator FadeInText()
+    {
+        for (float i = 0.05f; i <= 1; i += 0.05f)
+        {
+            Color c = spriteRendererTextOutro.material.color;
+            c.a = i;
+            spriteRendererTextOutro.material.color = c;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }*/
 }

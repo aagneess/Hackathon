@@ -22,14 +22,6 @@ public class Buttons : MonoBehaviour
     public GameObject tak÷verHuvudetText;
     public GameObject stillaNÂgonsHungerText;
 
-    private void Update()
-    {
-        if(outsiderActivated == true)
-        {
-            timer += Time.deltaTime;
-        }
-    }
-
     public void StreetLightButton()
     {
         if (spriteActivated == false)
