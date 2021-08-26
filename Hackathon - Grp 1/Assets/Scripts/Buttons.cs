@@ -7,10 +7,14 @@ public class Buttons : MonoBehaviour
     //  public SaturationCamera saturationCamera;
     public GameManager gameManager;
 
+    public AudioSource otherAudio;
+
     public bool spriteActivated = false;
+    bool outsiderActivated = false;
+
+    public float timer;
 
     public GameObject streetLight;
-    public GameObject windows;
     public GameObject foodCrate;
 
     public GameObject enLitenHandlingText;
@@ -18,14 +22,23 @@ public class Buttons : MonoBehaviour
     public GameObject tak÷verHuvudetText;
     public GameObject stillaNÂgonsHungerText;
 
+    private void Update()
+    {
+        if(outsiderActivated == true)
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
     public void StreetLightButton()
     {
         if (spriteActivated == false)
         {
+            otherAudio.clip = Resources.Load<AudioClip>("Audios/ES_Lamp_Switch_Click_2_-_SFX_Producer");
+            otherAudio.Play();
             //  Debug.Log("level " + saturationCamera.saturationLevel);
             //  gameManager.clickLevel++;
             //  saturationCamera.saturationLevel++;
-
             spriteActivated = true;
 
             streetLight.SetActive(true);
@@ -47,8 +60,8 @@ public class Buttons : MonoBehaviour
             //  saturationCamera.saturationLevel++;
 
             spriteActivated = true;
+            outsiderActivated = true;
 
-            windows.SetActive(true);
             tak÷verHuvudetText.SetActive(true);
             ljusOchV‰rmeText.SetActive(false);
 
@@ -62,6 +75,9 @@ public class Buttons : MonoBehaviour
     {
         if (spriteActivated == false)
         {
+            otherAudio.clip = Resources.Load<AudioClip>("Audios/ES_Crowd_Outdoor_-_SFX_Producer");
+            otherAudio.PlayScheduled(3f);
+
             //  Debug.Log("level " + saturationCamera.saturationLevel);
             //  gameManager.clickLevel++;
             //  saturationCamera.saturationLevel++;
