@@ -660,7 +660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Den kan stilla n\xE5gons hunger"
+  m_Text: "Den kan stilla n\xE5gons hunger."
 --- !u!222 &389617424
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1100,7 +1100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Den kan ge ljus och v\xE4rme"
+  m_Text: "Den kan ge ljus och v\xE4rme."
 --- !u!222 &620800636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1196,7 +1196,7 @@ Canvas:
   m_GameObject: {fileID: 649160685}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "En liten handling kan g\xF6ra stor skillnad\u2026"
+  m_Text: "En liten handling kan g\xF6ra stor skillnad..."
 --- !u!222 &653964265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3393,7 +3393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Den kan ge ett tak \xF6ver huvet\r"
+  m_Text: "Den kan ge ett tak \xF6ver huvudet."
 --- !u!222 &2034969977
 CanvasRenderer:
   m_ObjectHideFlags: 0

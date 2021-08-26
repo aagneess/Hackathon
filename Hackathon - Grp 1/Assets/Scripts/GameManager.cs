@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -124,7 +125,7 @@ public class GameManager : MonoBehaviour
 
             timer += Time.deltaTime;
 
-            if (storyAudio.isPlaying != true && timer > 4f)
+            if (storyAudio.isPlaying != true && timer > 5f)
             {
                 buttons.stillaNågonsHungerText.SetActive(false);
                 alreadyPlayed = false;
@@ -171,9 +172,12 @@ public class GameManager : MonoBehaviour
                     storyAudio.PlayDelayed(0.2f);
 
                     bliMånadsgivareText.SetActive(true);
+                }
 
-
-                    alreadyPlayed = true;
+                if (timer > 15f)
+                {
+                    Debug.Log("quitting");
+                    Application.Quit();
                 }
             }
         }
