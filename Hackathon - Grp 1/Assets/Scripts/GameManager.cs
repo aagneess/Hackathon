@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public int clickLevel = 0;
     public AudioSource storyAudio;
-   // public StoryQueue storyQueue;
+    // public StoryQueue storyQueue;
     public state currentState;
 
     public GameObject ButtonOne;
@@ -15,9 +15,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject medLiteKärlekText;
 
+    public Animator textAnimator;
+
     public Buttons buttons;
 
     public bool alreadyPlayed = false;
+
+    float timer;
 
     public enum state
     {
