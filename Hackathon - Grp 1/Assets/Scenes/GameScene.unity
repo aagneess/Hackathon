@@ -1255,7 +1255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &653964263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2007,6 +2007,7 @@ MonoBehaviour:
   ButtonOne: {fileID: 419358854}
   ButtonTwo: {fileID: 748611414}
   ButtonTree: {fileID: 1677137627}
+  enLiteHandlingText: {fileID: 653964262}
   "medLiteK\xE4rlekText": {fileID: 864831344}
   "bliM\xE5nadsgivareText": {fileID: 1325750990}
   outroBG: {fileID: 284396065}

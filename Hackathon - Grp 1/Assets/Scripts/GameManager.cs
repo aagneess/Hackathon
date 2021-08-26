@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject ButtonTwo;
     public GameObject ButtonTree;
 
+    public GameObject enLiteHandlingText;
     public GameObject medLiteKärlekText;
     public GameObject bliMånadsgivareText;
     public GameObject outroBG;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Buttons buttons;
 
     public bool alreadyPlayed = false;
+    bool timerCompleted = false;
 
     float timer;
 
@@ -46,15 +48,18 @@ public class GameManager : MonoBehaviour
     {
         if(currentState == state.enLitenHandling)
         {
-            if(alreadyPlayed == false)
+            timer += Time.deltaTime;
+
+            if(alreadyPlayed == false && timer > 2f)
             {
+                enLiteHandlingText.SetActive(true);
                 storyAudio.clip = Resources.Load<AudioClip>("Story/EnLitenHandling");
                 storyAudio.Play();
 
                 alreadyPlayed = true;
             }
 
-            if (storyAudio.isPlaying != true)
+            if (storyAudio.isPlaying != true && timer > 2f)
             {
                 ButtonOne.SetActive(true);
             }
@@ -62,6 +67,8 @@ public class GameManager : MonoBehaviour
 
         else if(currentState == state.ljusOchVarme)
         {
+            timer = 0f;
+
             if (alreadyPlayed == false)
             {
                 ButtonOne.SetActive(false);
@@ -94,8 +101,10 @@ public class GameManager : MonoBehaviour
             {
                 timer += Time.deltaTime;
 
-                if(timer > 3f)
+                if(timer > 3f && timerCompleted == false)
                 {
+                    timerCompleted = true;
+                    timer = 0f;
                     ButtonTree.SetActive(true);
                 }
             }
@@ -103,8 +112,6 @@ public class GameManager : MonoBehaviour
 
         else if (currentState == state.kanStillaHunger)
         {
-            timer = 0f;
-
             if (alreadyPlayed == false)
             {
                 ButtonTree.SetActive(false);
@@ -115,7 +122,9 @@ public class GameManager : MonoBehaviour
                 alreadyPlayed = true;
             }
 
-            if (storyAudio.isPlaying != true)
+            timer += Time.deltaTime;
+
+            if (storyAudio.isPlaying != true && timer > 4f)
             {
                 buttons.stillaNågonsHungerText.SetActive(false);
                 alreadyPlayed = false;
@@ -125,15 +134,14 @@ public class GameManager : MonoBehaviour
 
         else if (currentState == state.medLiteKarlek)
         {
+            timer = 0f;
+
             if (alreadyPlayed == false)
             {
                 storyAudio.clip = Resources.Load<AudioClip>("Story/MedLiteKärlek");
                 storyAudio.PlayDelayed(1f);
 
-                if(storyAudio.isPlaying == true)
-                {
-                    medLiteKärlekText.SetActive(true);
-                }
+                medLiteKärlekText.SetActive(true);
 
                 alreadyPlayed = true;
             }
