@@ -1,22 +1,23 @@
 body {
-  background-color: var(--text);
+  background-color: var(--unity-bg);
 }
 canvas {
   width: 1280px;
   height: 720px;
-  background: var(--text);
+  background: #231f20;
   margin-top: 3rem;
   border-radius: 2rem;
 }
 a {
   font-family: "HinaMincho";
   color: #fff;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: 50;
   letter-spacing: 0.2rem;
   text-decoration: none;
   position: relative;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 a:hover {
   color: #fff;
