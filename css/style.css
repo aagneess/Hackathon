@@ -2,8 +2,8 @@ body {
   background-color: var(--unity-bg);
 }
 canvas {
-  width: 70vw;
-  height: calc(70vw * 9 / 16);
+  width: 50vw;
+  height: calc(50vw * 9 / 16);
   background: #231f20;
   margin-top: 3rem;
   margin-bottom: 3rem;
