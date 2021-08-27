@@ -1,5 +1,5 @@
 body {
-  background-color: var(--unity-bg);
+  background-color: var(--text);
 }
 canvas {
   width: 50vw;
@@ -9,6 +9,13 @@ canvas {
   margin-bottom: 3rem;
   border-radius: 2rem;
 }
+@media screen and (max-width: 800px) {
+  canvas {
+    width: 70vw;
+    height: calc(70vw * 9 / 16);
+  }
+}
+
 a {
   font-family: "HinaMincho";
   color: #fff;
