@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
 
             timer += Time.deltaTime;
 
-            if (storyAudio.isPlaying != true && timer > 5f)
+            if (storyAudio.isPlaying != true && timer > 5.8f)
             {
                 buttons.stillaNågonsHungerText.SetActive(false);
                 alreadyPlayed = false;
