@@ -2,8 +2,8 @@ body {
   background-color: var(--text);
 }
 canvas {
-  width: 50vw;
-  height: calc(50vw * 9 / 16);
+  width: 900px;
+  height: calc(900px * 9 / 16);
   background: #231f20;
   margin-top: 3rem;
   margin-bottom: 3rem;
