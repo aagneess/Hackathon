@@ -79,7 +79,8 @@ a:hover::before {
   letter-spacing: 0.2rem;
   font-weight: 50;
   text-decoration: none;
-  margin: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 img {
   border-radius: 50%;
@@ -87,4 +88,6 @@ img {
   height: 150px;
   object-fit: scale-down;
   float: right;
+  margin-left: 0.2rem;
+  margin-bottom: 0.2rem;
 }
